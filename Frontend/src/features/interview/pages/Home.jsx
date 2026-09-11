@@ -102,8 +102,7 @@ const Home = () => {
               className="panel__textarea"
               placeholder={`Paste the full job description here...
 
-Example:
-Senior Frontend Engineer requires strong knowledge of React, JavaScript, TypeScript and modern web development.`}
+      Example: Senior Frontend Engineer requires strong knowledge of React, JavaScript, TypeScript and modern web development.`}
               maxLength={5000}
             />
 
@@ -120,7 +119,7 @@ Senior Frontend Engineer requires strong knowledge of React, JavaScript, TypeScr
             <div className="panel__header">
               <span className="panel__icon">👤</span>
 
-              <h2>Your Profile</h2>
+              <h2>Your Profile</h2> 
             </div>
 
             {/* Resume Upload */}
