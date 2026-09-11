@@ -49,37 +49,26 @@ export const useAuth = () => {
         }
     };
 
+const handleRegister = async ({ username, email, password }) => {
+    setLoading(true);
 
-    const handleRegister = async (
-        username,
-        email,
-        password
-    ) => {
+    try {
+        const data = await register({
+            username,
+            email,
+            password
+        });
 
-        setLoading(true);
+        setUser(data.user);
 
-        try {
+        return data;
 
-            const data = await register({
-                username,
-                email,
-                password
-            });
-
-            setUser(data.user);
-
-            return data;
-
-        } catch (error) {
-
-            throw error;
-
-        } finally {
-
-            setLoading(false);
-
-        }
-    };
+    } catch (error) {
+        throw error;
+    } finally {
+        setLoading(false);
+    }
+};
 
 
     const handleLogout = async () => {
